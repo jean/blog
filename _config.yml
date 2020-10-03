@@ -8,4 +8,5 @@ include:
   - README.md
   - LICENSE.md
 theme: jekyll-theme-primer
-title: The Blog of Safia Abdalla
+title: The Captain's Log
+description: A blog by Safia Abdalla
