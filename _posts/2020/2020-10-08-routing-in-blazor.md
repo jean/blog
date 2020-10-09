@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: posts
 title: Under the hood with routing in Blazor
+tags: blazor
 ---
 
 A while back, I posted [a response to a user issue](https://github.com/dotnet/aspnetcore/issues/21668#issuecomment-626909464) on the ASP.NET Core repo explaining the inner workings of routing in Blazor. The response was pretty good, but I wanted to take the oppurtunity to flesh it out a little bit more in a blog post.
@@ -132,9 +133,9 @@ public static void NotifyLocationChanged(string uri, bool isInterceptedLink)
 }
 ```
 
-> #### :bulb: Another segue into NavigationManager
+#### Another segue into NavigationManager
 
-> The NavigationManager is a shared concept across both Blazor Server and Blazor WebAssembly. The NavigationManager is registered as a dependency in the Blazor server application and serves as a mediator between the navigation events that occur in the browser and the the follow-on actions that occur in Blazor.
+The NavigationManager is a shared concept across both Blazor Server and Blazor WebAssembly. The NavigationManager is registered as a dependency in the Blazor server application and serves as a mediator between the navigation events that occur in the browser and the the follow-on actions that occur in Blazor.
 
 The `SetLocation` method invoke above in turn calls the [NotifyLocationChanged](https://github.com/dotnet/aspnetcore/blob/648c15dbe90fb8c113f7c6b4adeb40d9e10494f6/src/Components/WebAssembly/WebAssembly/src/Services/WebAssemblyNavigationManager.cs#L25-L290) method in the base [NavigationManager](https://github.com/dotnet/aspnetcore/blob/648c15dbe90fb8c113f7c6b4adeb40d9e10494f6/src/Components/Components/src/NavigationManager.cs#L202-L212).
 

@@ -1,4 +1,7 @@
-## Sorting that's smooth like butter
+---
+layout: posts
+title: Sorting that's smooth like butter
+---
 
 Continuing on with the trend of exploring esoterically named sorting algorithms, I bring to you a blog post on....smoothsort! I'm gonna be real with you. I was sold on the name the moment I learned about this algorithm. 
 
