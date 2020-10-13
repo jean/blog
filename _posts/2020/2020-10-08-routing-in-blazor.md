@@ -21,7 +21,7 @@ This blog post will walk through these two aspects of routing as it relates to B
 
 If you're the visual type, the concept below outlines the different components of this system. Be warned, my concept mapping skills are rough and the rest of the blog post will have way more detail. Hopefully, that's a good incentive to continue reading! 
 
- ![Concept map of routing in Blazor (ish)](/images/blazor-routing-concept-map.jpg)  
+ ![Concept map of routing in Blazor (ish)](../images/blazor-routing-concept-map.jpg)  
 
 We'll start our exploration of routing by taking a look at the first bullet mentioned above: how do we actually define routes and associate them with pages (or more precisely, components)?
 
