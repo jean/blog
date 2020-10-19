@@ -37,7 +37,7 @@ That being said, `ComponentBase` is where all the interesting stuff happens so l
 
 ### The Lifecycle Methods
 
-Whenever I think about lifecycle methods in components (whether Blazor or React), I always think back to those "Life Cycle of a Cell" diagrams from high school. The concepts are actually fairly similar. A component has particular stages of development, from when it is first rendered on the page to when it is discarded. Components can also react to changes in their "environment", whether it is events being triggered or parameters changing.
+Whenever I think about lifecycle methods in components (whether Blazor or React), I always think back to those "Life Cycle of a Cell" diagrams from high school. The concepts are actually fairly similar. A component has particular stages of development, from when it is first rendered on the page to when it is discarded. Components can also react to changes in their "environment", such as triggered events or parameter changes.
 
 #### SetParametersAsync
 
