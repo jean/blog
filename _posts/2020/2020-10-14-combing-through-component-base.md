@@ -31,7 +31,7 @@ public interface IComponent {
 
 Pretty bare bones, huh? Notably, the `IComponent` interface does not require that the component implement Blazor's component lifecycle methods or support any event handling. This makes the `IComponent` interface an ideal base for component's that don't require any kind of interactivity, like the `Router` component mentioned above or [the LayoutView component](https://github.com/dotnet/aspnetcore/blob/724c2e75a7415e67f9f5ad33fc72bf55507b8d59/src/Components/Components/src/LayoutView.cs).
 
-One key thing to note: the `IComponent` interface is used throughout the codebase for component discovery and rendering. That means tht component's aren't required to derive from `ComponentBase` in order to plug in with everything else.
+One key thing to note: the `IComponent` interface is used throughout the codebase for component discovery and rendering. That means that components aren't required to derive from `ComponentBase` in order to plug in with everything else.
 
 That being said, `ComponentBase` is where all the interesting stuff happens so let's continue our exploration of that.
 
