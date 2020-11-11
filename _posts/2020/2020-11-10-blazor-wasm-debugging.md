@@ -2,7 +2,7 @@
 layout: posts
 title: Under the hood with debugging in Blazor WebAssembly
 tags: [blazor]
-date: 2020-10-26 00:00:00 -0500
+date: 2020-10-10 00:00:00 -0500
 ---
 
 This blog post is a detour from the typical content I've been writing about Blazor, but it is still one that is compelling to cover.
