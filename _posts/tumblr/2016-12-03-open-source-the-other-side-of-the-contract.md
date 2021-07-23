@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Open source: the other side of the contract'
 date: '2016-12-03T22:30:23-08:00'
 tags: []

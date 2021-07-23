@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Thoughts on Black Panther
 date: '2018-02-19T09:12:14-08:00'
 tags: []

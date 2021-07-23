@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How does Git store working tree state?
 date: '2018-03-12T09:30:43-07:00'
 tags: []

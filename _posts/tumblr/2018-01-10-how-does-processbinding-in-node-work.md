@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How does process.binding() in Node work?
 date: '2018-01-10T09:05:54-08:00'
 tags:

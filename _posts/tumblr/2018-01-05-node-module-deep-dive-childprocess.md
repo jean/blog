@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: child_process'
 date: '2018-01-05T09:03:09-08:00'
 tags:

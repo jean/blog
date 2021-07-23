@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Random thoughts on “heroes”
 date: '2018-02-05T10:30:42-08:00'
 tags: []

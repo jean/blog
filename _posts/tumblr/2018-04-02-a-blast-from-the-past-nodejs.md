@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'A blast from the past: Node.JS'
 date: '2018-04-02T09:18:50-07:00'
 tags: []

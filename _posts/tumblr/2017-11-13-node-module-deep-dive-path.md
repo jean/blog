@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: path'
 date: '2017-11-13T10:00:59-08:00'
 tags:

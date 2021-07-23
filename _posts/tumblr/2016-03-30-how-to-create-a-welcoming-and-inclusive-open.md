@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How To Create A Welcoming and Inclusive Open Source Space
 date: '2016-03-30T15:28:01-07:00'
 tags: []

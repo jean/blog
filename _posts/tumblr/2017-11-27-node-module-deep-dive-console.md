@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: console'
 date: '2017-11-27T10:00:41-08:00'
 tags:

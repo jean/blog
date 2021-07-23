@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Peeking into `pwd`
 date: '2018-04-25T20:41:29-07:00'
 tags: []

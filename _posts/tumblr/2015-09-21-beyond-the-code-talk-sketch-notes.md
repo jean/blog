@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: beyond the code talk sketch notes
 date: '2015-09-21T23:16:54-07:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Solving a problem then thinking too hard about how you solved the problem
 date: '2018-01-31T10:03:06-08:00'
 tags: []

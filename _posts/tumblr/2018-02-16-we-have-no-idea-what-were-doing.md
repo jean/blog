@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: We have no idea what we’re doing.
 date: '2018-02-16T10:30:44-08:00'
 tags: []

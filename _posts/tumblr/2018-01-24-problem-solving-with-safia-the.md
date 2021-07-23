@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Problem solving with Safia: the optimizer’s dilemma'
 date: '2018-01-24T10:11:51-08:00'
 tags:

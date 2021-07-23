@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Rolling in render trees
 tags: [blazor]
 date: 2020-10-26 00:00:00 -0500

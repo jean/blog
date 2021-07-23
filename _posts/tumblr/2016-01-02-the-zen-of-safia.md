@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: The Zen of Safia
 date: '2016-01-02T13:52:49-08:00'
 tags: []

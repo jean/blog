@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Some thoughts on “productivity”
 date: '2018-02-21T08:54:40-08:00'
 tags: []

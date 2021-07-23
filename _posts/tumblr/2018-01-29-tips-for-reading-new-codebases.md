@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Tips for reading new codebases
 date: '2018-01-29T10:00:54-08:00'
 tags: []

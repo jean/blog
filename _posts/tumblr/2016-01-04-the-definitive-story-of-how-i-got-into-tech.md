@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: The Definitive Story of How I Got Into Tech
 date: '2016-01-04T17:12:15-08:00'
 tags: []

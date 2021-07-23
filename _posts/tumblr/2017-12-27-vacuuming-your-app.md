@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Vacuuming your app
 date: '2017-12-27T09:53:00-08:00'
 tags: []

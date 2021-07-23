@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Advent of Code Day 3
 date: '2018-12-03T19:39:23-08:00'
 tags: []

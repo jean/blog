@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What I learned when I tried to hack my smart vibrator
 date: '2017-12-11T09:37:45-08:00'
 tags: []

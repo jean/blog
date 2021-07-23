@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How do I get started contributing to open source?
 date: '2018-02-14T15:04:37-08:00'
 tags: []

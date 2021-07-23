@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: Buffer'
 date: '2017-12-04T01:50:11-08:00'
 tags:

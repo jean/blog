@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What’s inside the .git directory?
 date: '2018-03-05T10:01:10-08:00'
 tags: []

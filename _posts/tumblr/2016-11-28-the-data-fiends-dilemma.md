@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: The data fiend’s dilemma
 date: '2016-11-28T22:43:14-08:00'
 tags: []

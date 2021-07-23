@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Evangelizing for open source
 date: '2017-10-30T11:01:45-07:00'
 tags: []

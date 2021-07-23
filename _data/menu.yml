@@ -1,0 +1,17 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: github.com/captainsafia
+    url: https://github.com/captainsafia
+  - title: "@captainsafia"
+    url: https://twitter.com/captainsafia
+  - title: all posts
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: See archive...
+      show_more_url: archive.html
+
+  - title: rss
+    url: feed.xml

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What happens when you run `cp` on the command line?
 date: '2018-04-27T17:13:35-07:00'
 tags: []

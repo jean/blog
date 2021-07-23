@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Combing through ComponentBase
 tags: [blazor]
 ---

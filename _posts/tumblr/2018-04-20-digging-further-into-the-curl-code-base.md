@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Digging further into the curl code base
 date: '2018-04-20T19:25:10-07:00'
 tags: []

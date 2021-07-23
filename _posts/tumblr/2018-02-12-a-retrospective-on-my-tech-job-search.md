@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: A retrospective on my tech job search
 date: '2018-02-12T10:40:31-08:00'
 tags: []

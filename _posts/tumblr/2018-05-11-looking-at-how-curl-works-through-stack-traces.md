@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Looking at how `curl` works through stack traces
 date: '2018-05-11T11:01:11-07:00'
 tags: []

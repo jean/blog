@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Programmers, Assemble!
 date: '2016-02-15T09:26:28-08:00'
 tags: []

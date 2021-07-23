@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: In which I answer questions about conference speaking
 date: '2018-02-02T09:34:20-08:00'
 tags: []

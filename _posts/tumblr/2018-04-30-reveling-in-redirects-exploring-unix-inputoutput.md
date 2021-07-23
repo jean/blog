@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Reveling in redirects: exploring Unix input/output redirection'
 date: '2018-04-30T17:42:38-07:00'
 tags: []

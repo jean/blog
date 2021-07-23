@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: So you wanna open source a project, eh?
 date: '2016-12-06T12:42:10-08:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: The Good, The Bad, The Unwanted
 date: '2016-02-08T09:37:33-08:00'
 tags: []

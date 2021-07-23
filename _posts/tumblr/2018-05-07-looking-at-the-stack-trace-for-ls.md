@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Looking at the stack trace for `ls`
 date: '2018-05-07T07:58:01-07:00'
 tags: []

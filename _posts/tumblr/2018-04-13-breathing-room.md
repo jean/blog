@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Breathing room.
 date: '2018-04-13T14:13:17-07:00'
 tags: []

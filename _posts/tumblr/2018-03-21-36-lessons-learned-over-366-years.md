@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 36 lessons learned over 3.66 years
 date: '2018-03-21T10:00:45-07:00'
 tags: []

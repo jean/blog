@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Thanks for the Compliment!
 date: '2016-01-09T16:51:48-08:00'
 tags: []

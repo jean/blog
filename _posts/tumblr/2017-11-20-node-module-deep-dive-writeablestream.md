@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: WriteableStream'
 date: '2017-11-20T10:00:50-08:00'
 tags: []

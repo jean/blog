@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How does Node load built-in modules?
 date: '2018-01-17T09:51:26-08:00'
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Sorting that's smooth like butter
 ---
 

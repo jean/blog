@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Hacking My To-do List
 date: '2016-03-14T04:39:22-07:00'
 tags: []

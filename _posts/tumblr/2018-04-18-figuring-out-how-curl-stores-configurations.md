@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Figuring out how `curl` stores configurations
 date: '2018-04-18T11:25:32-07:00'
 tags: []

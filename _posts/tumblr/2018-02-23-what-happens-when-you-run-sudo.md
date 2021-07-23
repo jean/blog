@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What happens when you run sudo?
 date: '2018-02-23T09:19:30-08:00'
 tags: []

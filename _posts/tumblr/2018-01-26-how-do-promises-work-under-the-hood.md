@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How do Promises work under the hood?
 date: '2018-01-26T10:27:44-08:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Businesswoman Tips
 date: '2016-02-03T22:08:02-08:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: EventEmitter'
 date: '2018-01-12T08:58:35-08:00'
 tags:

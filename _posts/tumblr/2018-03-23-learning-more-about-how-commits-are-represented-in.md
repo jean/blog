@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Learning more about how commits are represented in Git
 date: '2018-03-23T09:43:49-07:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: fs'
 date: '2018-01-08T09:18:39-08:00'
 tags:

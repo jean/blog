@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Trying to figure out how git-status works: a saga'
 date: '2018-03-09T09:08:47-08:00'
 tags: []

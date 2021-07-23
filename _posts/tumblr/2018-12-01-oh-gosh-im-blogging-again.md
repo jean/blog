@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Oh gosh, I’m blogging again
 date: '2018-12-01T13:24:03-08:00'
 tags: []

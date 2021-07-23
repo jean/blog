@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What happens when you run `sudo !!`?
 date: '2018-05-09T17:03:32-07:00'
 tags: []

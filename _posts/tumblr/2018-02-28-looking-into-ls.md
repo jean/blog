@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Looking into ls
 date: '2018-02-28T09:37:03-08:00'
 tags: []

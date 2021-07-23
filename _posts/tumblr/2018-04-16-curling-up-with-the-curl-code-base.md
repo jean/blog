@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Curling up with the `curl` code base
 date: '2018-04-16T10:07:15-07:00'
 tags: []

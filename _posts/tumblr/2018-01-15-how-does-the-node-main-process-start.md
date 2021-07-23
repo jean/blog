@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How does the Node main process start?
 date: '2018-01-15T09:21:07-08:00'
 tags:

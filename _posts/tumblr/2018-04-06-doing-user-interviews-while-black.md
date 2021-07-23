@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Doing user interviews while Black
 date: '2018-04-06T09:15:59-07:00'
 tags: []

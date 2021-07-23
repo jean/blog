@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Discovering async hooks
 date: '2018-02-07T10:15:04-08:00'
 tags:

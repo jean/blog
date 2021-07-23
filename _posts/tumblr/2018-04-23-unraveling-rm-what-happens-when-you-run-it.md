@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Unraveling `rm`: what happens when you run it?'
 date: '2018-04-23T19:05:37-07:00'
 tags: []

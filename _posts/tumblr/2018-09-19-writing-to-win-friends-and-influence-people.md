@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Writing to win friends and influence people
 date: '2018-09-19T22:05:51-07:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Looking into curl: part 2'
 date: '2018-05-16T17:57:17-07:00'
 tags: []

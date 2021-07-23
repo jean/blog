@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Micromaking kindness: an experiment'
 date: '2016-11-26T16:14:23-08:00'
 tags:

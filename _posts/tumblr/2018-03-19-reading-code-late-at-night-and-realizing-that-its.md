@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Reading code late at night and realizing that it’s not a good idea
 date: '2018-03-19T08:49:01-07:00'
 tags: []

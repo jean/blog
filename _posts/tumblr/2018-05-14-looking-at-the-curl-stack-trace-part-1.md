@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Looking at the curl stack trace: part 1'
 date: '2018-05-14T10:00:46-07:00'
 tags: []

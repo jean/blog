@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Things I learned in 2017
 date: '2017-12-29T11:16:31-08:00'
 tags: []

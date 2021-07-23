@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Future Fallacies
 date: '2016-01-30T13:31:30-08:00'
 tags: []

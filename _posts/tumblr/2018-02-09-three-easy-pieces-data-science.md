@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Three easy pieces: data science'
 date: '2018-02-09T10:45:05-08:00'
 tags:

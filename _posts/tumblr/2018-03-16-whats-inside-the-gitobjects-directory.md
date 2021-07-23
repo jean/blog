@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What’s inside the `.git/objects` directory?
 date: '2018-03-16T10:00:45-07:00'
 tags: []

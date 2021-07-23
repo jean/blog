@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How I learned to learn
 date: '2018-01-22T10:23:55-08:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Let’s Hear It For Small Data
 date: '2015-12-13T10:53:59-08:00'
 tags: []

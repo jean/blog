@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What 2015 Taught Me About Running a Startup
 date: '2015-12-30T17:18:26-08:00'
 tags: []

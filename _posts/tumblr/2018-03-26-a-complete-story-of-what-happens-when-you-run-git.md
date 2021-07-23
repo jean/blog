@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: A complete story of what happens when you run `git commit`
 date: '2018-03-26T09:06:31-07:00'
 tags: []

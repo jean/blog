@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: T is for Transitions
 date: '2016-01-07T19:07:43-08:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: A purposeful hiatus
 date: '2018-05-18T08:15:54-07:00'
 tags: []

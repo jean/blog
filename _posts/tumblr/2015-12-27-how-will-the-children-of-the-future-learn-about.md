@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How will the children of the future learn about science?
 date: '2015-12-27T10:47:55-08:00'
 tags: []

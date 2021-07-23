@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Some ramblings on the future of web content
 date: '2017-11-10T10:00:29-08:00'
 tags: []

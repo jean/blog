@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How does `git add` work under the hood?
 date: '2018-03-28T09:37:59-07:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: My grandmother passed away today.
 date: '2017-11-30T15:25:29-08:00'
 tags:

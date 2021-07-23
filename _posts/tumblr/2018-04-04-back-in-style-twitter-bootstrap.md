@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Back in style: Twitter Bootstrap'
 date: '2018-04-04T09:46:57-07:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How does Git know if you have uncommitted changes in the working tree? (Part
   1)
 date: '2018-03-14T10:41:00-07:00'

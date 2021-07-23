@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Looking at the first commit of Redux
 date: '2018-03-30T09:06:43-07:00'
 tags: []

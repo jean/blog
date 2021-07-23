@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What do `cp` and `mv` do under the hood?
 date: '2018-05-04T08:27:29-07:00'
 tags: []

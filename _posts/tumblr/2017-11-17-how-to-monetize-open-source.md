@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How to monetize open source
 date: '2017-11-17T10:00:38-08:00'
 tags: []

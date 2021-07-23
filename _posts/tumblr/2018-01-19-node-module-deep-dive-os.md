@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: os'
 date: '2018-01-19T10:00:27-08:00'
 tags:

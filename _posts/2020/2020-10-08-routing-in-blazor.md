@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Under the hood with routing in Blazor
 tags: blazor
 ---

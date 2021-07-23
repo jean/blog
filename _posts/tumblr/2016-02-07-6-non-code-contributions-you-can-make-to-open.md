@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 6 non-code contributions you can make to open source
 date: '2016-02-07T20:43:47-08:00'
 tags: []

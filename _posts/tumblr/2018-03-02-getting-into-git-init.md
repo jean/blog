@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Getting into git init
 date: '2018-03-02T08:03:00-08:00'
 tags: []

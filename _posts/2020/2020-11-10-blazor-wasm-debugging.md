@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Under the hood with debugging in Blazor WebAssembly
 tags: [blazor]
 date: 2020-11-10 00:00:00 -0500

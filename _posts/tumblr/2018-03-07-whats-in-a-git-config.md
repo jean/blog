@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: What’s in a git config?
 date: '2018-03-07T08:30:26-08:00'
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: How to (re-)launch a product
 date: '2018-01-01T09:19:42-08:00'
 tags: []

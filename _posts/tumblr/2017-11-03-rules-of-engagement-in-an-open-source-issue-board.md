@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Rules of engagement in an open source issue board
 date: '2017-11-03T11:01:09-07:00'
 tags: []

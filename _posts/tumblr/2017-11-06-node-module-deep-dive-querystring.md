@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: 'Node module deep-dive: querystring'
 date: '2017-11-06T10:00:56-08:00'
 tags:

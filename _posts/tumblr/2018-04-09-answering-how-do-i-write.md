@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: Answering “How do I write?”
 date: '2018-04-09T11:53:06-07:00'
 tags: []

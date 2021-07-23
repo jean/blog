@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: I finally figured out how Unix redirection works under the hood
 date: '2018-05-02T18:48:51-07:00'
 tags: []
