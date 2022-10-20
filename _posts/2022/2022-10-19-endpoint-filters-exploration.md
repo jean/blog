@@ -1,8 +1,6 @@
-```
 ---
 title: A deep dive into endpoint filters in ASP.NET Core 7
 ---
-```
 
 One of the features that I worked on as part of the ASP.NET Core 7 release was support for endpoint filters in minimal APIs. I recently shared some of the internals of the implementation at a recent Ignite presentation, but I figured I would share the insights in a blog as well. If you're more of a visual or audio learner, you might find [the video presentation](https://aka.ms/Ignite2022Dev/BRK206H) helpful.
 
