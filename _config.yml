@@ -19,8 +19,14 @@ author:
 plugins:
   - jekyll-feed
   - jekyll-paginate
-paginate:            5
+  - jekyll-mermaid
+  - jekyll-target-blank
+
+paginate:            3
 paginate_path:       "page:num"
+
+mermaid:
+  src: https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js
 
 # Custom vars
 urls:
