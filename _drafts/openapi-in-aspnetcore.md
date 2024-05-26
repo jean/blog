@@ -62,6 +62,13 @@ public record Todo(int Id, string Title, bool IsCompleted);
 
 Navigating to the `/openapi/v1.json` endpoint associated with this application gives us the OpenAPI document associated with this API.
 
+> Note: this generated OpenAPI is a point-in-time representation. The actual generated document you see might vary depending on the version of the Microsoft.AspNetCore.OpenApi package you are using and the .NET runtime that you are targeting.
+
+<hr/>
+
+<details>
+<summary>openapi/v1.json</summary>
+<div markdown=1>
 ```json
 {
   "openapi": "3.0.1",
@@ -202,6 +209,10 @@ Navigating to the `/openapi/v1.json` endpoint associated with this application g
   ]
 }
 ```
+</div>
+</details>
+
+<hr/>
 
 So, how did we get here? Let's start by taking a look at what happens when we invoke `builder.Services.AddOpenApi` in our application. This method is responsible for registered OpenAPI-related types into our application's DI container. The core of the implementation for `AddOpenApi` looks something like this (also see [here](https://github.com/dotnet/aspnetcore/blob/a0652e0852f1dc9ea199a453efd421f6dfc04f1b/src/OpenApi/src/Extensions/OpenApiServiceCollectionExtensions.cs#L61)).
 
@@ -225,8 +236,8 @@ The components that are registered here give us a good overview of the different
 flowchart LR
 	mvc[Controller-based API]
 	minapi[Minimal API]
-	defdescprov[DefaultApiDescriptionProvider]
-	endpdescprov[EndpointMetadataDescriptionProvider]
+	defdescprov[ApiExplorer: DefaultApiDescriptionProvider]
+	endpdescprov[ApiExplorer: EndpointMetadataDescriptionProvider]
 	desccoll[IApiDescriptionCollection]
 	compservice[[OpenApiComponentService]]
 	docsvc[[OpenApiDocumentService]]
@@ -246,4 +257,83 @@ Let's get started by taking a look at the first set of arrows in the system: tho
 
 ## The API Explorer
 
-API Explorer is the affectionate term for a set of APIs and abstractions in ASP.NET Core that provide a mechanism for introspecting APIs.
+API Explorer is the affectionate term for a set of APIs and abstractions in ASP.NET Core that provide a mechanism for introspecting APIs. The crux of API explorer's implementation is the `IApiDescriptionProvider` interface.
+
+```csharp
+public interface IApiDescriptionProvider
+{
+  int Order { get; }
+  void OnProvidersExecuting(ApiDescriptionProviderContext context);
+  void OnProvidersExecuted(ApiDescriptionProviderContext context)
+}
+```
+
+Any framework built on top of ASP.NET Core can implement an `IApiDescriptionProvider` to outline how its concept of an HTTP route should map to an `ApiDescription`. 
+
+```csharp
+public class ApiDescription
+{
+    public ActionDescriptor ActionDescriptor { get; set; } = default!;
+    public string? GroupName { get; set; }
+    public string? HttpMethod { get; set; }
+    public IList<ApiParameterDescription> ParameterDescriptions { get; } = new List<ApiParameterDescription>();
+    public IDictionary<object, object> Properties { get; } = new Dictionary<object, object>();
+    public string? RelativePath { get; set; }
+    public IList<ApiRequestFormat> SupportedRequestFormats { get; } = new List<ApiRequestFormat>();
+    public IList<ApiResponseType> SupportedResponseTypes { get; } = new List<ApiResponseType>();
+}
+```
+
+This class allows `IApiDescriptionProvider` interface to describe the fundamental components of an HTTP request/response handler:
+
+- The HTTP method that it supports taking request on
+- The HTTP request path that it supports
+- The types of inputs that it takes, both in the request body and via parameters in the route/query args/header
+- The types of responses that it produces
+
+The information captured by the `IApiDescriptionProvider` implementations can be consumed by anyone, including OpenAPI generators.
+
+## Into OpenAPI
+
+If you squint, the information in the `ApiDescription`s provided by `IApiDescriptionProvider` fulfill a lot of the requirements of the OpenAPI specification, but doesn't exactly match the shape of the spec. Enter the first responsibility of the `OpenApiDocumentService`, mapping `ApiDescription` instances to `OpenApiOperation` instances that are eventually aggregated into a top-level document.
+
+> Note: The `OpenApiOperation` types are provided by the [Microsoft.OpenApi](https://github.com/microsoft/OpenAPI.NET) which provides a .NET-based object model for representing the OpenAPI document and serializers/deserializers for it.
+
+In addition to mapping the information provided directly in the `ApiDescription`, the OpenAPI generator also maps information exposed in endpoint metadata. For example:
+
+- `IEndpointNameMetadata` maps to the operation's ID.
+- `ITagsMetadata` maps to the operation's tags.
+- `IEndpointSummaryMetadata` maps to the operation's summary.
+- `IEndpointDescriptionMetadata` maps to the operation's description.
+
+And so on. The `OpenApiDocumentService` also massages some of the incompatibilities between the metadata that's exposed in the `ApiDescription` and the expectations of the OpenAPI specification. Some of these quirks include:
+
+- The `IApiDescriptionProvider` implementations for minimal APIs and MVC reflect the quirks of the model-binding behavior of those systems. For example, MVC represents binding arguments from a form differently from minimal APIs but both must map to the same functional representation in OpenAPI.
+- OpenAPI expects certain defaults to be set for responses and request bodies that `IApiDescriptionProvider` implementations don't set.
+
+Outside of those quirks and metadata mappings, the implementation of the `OpenApiDocumentService` is fairly straightforward. The other interesting aspect of OpenAPI is in JSON Schema/OpenAPI schema.
+
+## With JSON Schemas
+
+[JSON Schema](https://json-schema.org/) is a draft specification that allows developers to document and validation JSON data. OpenAPI schema is a superset of the JSON schema format. In the context of OpenAPI, OpenAPI schemas are used to describe the types of inputs and outputs a given HTTP handler processes.
+
+> Note: The relationship between JSON Schema and OpenAPI Schema varies depending on the version of the OpenAPI specification that you are targeting. OpenAPI v3.1 supports JSON Schema exactly without any modifications. Versions of the specification outside of this one expose a superset of the features that are specified in JSON schema via OpenAPI schema.
+
+The main responsibilities of ASP.NET Core's built-in OpenAPI support is the generation of JSON schemas from .NET types used in an API. The bulk of JSON schema generation support in ASP.NET Core's implementation is provided by the underlying JSON schema generation in System.Text.Json.
+
+> Note: As of .NET 9 Preview 5, the implementation is consumed via the `JsonSchemaMapper` prototype.
+
+The OpenAPI generator implementation is responsible for:
+
+- Adding support for validation attributes to the generated schemas
+- Adding support for route constraints to parameters (that are sourced from the route)
+- Mapping polymorphic schemas to the specific format required by OpenAPI
+- Adding support for references local to the OpenAPI document
+
+## Conclusion
+
+And that's the gist of ASP.NET Core's OpenAPI support. The fundamentals of this support are enabled by:
+
+- The flexibility and descriptiveness of the API explorer metadata layer
+- The functionality exposed by System.Text.Json's schema generation
+- A whole lot of massaging in between the two :sweat_smile:
