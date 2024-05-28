@@ -295,17 +295,6 @@ The information captured by the `IApiDescriptionProvider` implementations can be
 
 ## Into OpenAPI
 
-This class allows `IApiDescriptionProvider` interface to describe the fundamental components of an HTTP request/response handler:
-
-- The HTTP method that it supports for taking requests
-- The HTTP request path that it supports
-- The types of inputs that it takes, both in the request body and via parameters in the route/query arguments/header
-- The types of responses that it produces
-
-The information captured by the `IApiDescriptionProvider` implementations can be consumed by anyone, including OpenAPI generators.
-
-## Into OpenAPI
-
 If you squint, the information in the `ApiDescription`s provided by `IApiDescriptionProvider` fulfill a lot of the requirements of the OpenAPI specification, but don't exactly match the shape of the spec. Enter the first responsibility of the `OpenApiDocumentService`: mapping `ApiDescription` instances to `OpenApiOperation` instances that are eventually aggregated into a top-level document.
 
 > Note: The `OpenApiOperation` types are provided by the [Microsoft.OpenApi](https://github.com/microsoft/OpenAPI.NET) which provides a .NET-based object model for representing the OpenAPI document and serializers/deserializers for it.
