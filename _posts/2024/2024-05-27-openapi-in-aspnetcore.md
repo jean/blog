@@ -2,10 +2,6 @@
 title: A deep dive into OpenAPI support in ASP.NET Core
 ---
 
----
-title: A deep dive into OpenAPI support in ASP.NET Core
----
-
 The [OpenAPI specification](https://www.openapis.org/) is a standard for describing HTTP APIs. The standard allows developers to define the shape of APIs that can be plugged into client generators, server generators, testing tools, documentation, and more. 
 
 > :bulb: You might've heard the term Swagger used interchangeably with OpenAPI to describe the specification and standard used to describe HTTP APIs. This document will use the term "OpenAPI" consistently to refer to the document and specification.
