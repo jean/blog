@@ -2,24 +2,28 @@
 title: A deep dive into OpenAPI support in ASP.NET Core
 ---
 
-The [OpenAPI specification](https://www.openapis.org/) is a standard for describing HTTP APIs. The standard allows developers to define the shape of APIs that can be plugged into client generators, server generators, testing tools, documentation and more. 
+---
+title: A deep dive into OpenAPI support in ASP.NET Core
+---
 
-> :bulb: You might've heard the term Swagger used interchangeably with OpenAPI to describe the specification and standard used to describe HTTP APIs. These docs will use the term "OpenAPI" consistently to refer to the document and specification.
+The [OpenAPI specification](https://www.openapis.org/) is a standard for describing HTTP APIs. The standard allows developers to define the shape of APIs that can be plugged into client generators, server generators, testing tools, documentation, and more. 
 
-ASP.NET core is a web stack for .NET and provides two main models for building HTTP-based APIs:
+> :bulb: You might've heard the term Swagger used interchangeably with OpenAPI to describe the specification and standard used to describe HTTP APIs. This document will use the term "OpenAPI" consistently to refer to the document and specification.
+
+ASP.NET Core is a web stack for .NET and provides two main models for building HTTP-based APIs:
 
 - Controller-based APIs that use the object-oriented style of traditional MVC (Model-View-Controller) frameworks.
 - Minimal APIs that use a functional and imperative style programming model.
 
-Throughout these docs, we'll talk about ASP.NET's "code-first" integration with OpenAPI. Code-first is one of the two main models of interacting with APIs and their accompanying descriptions.
+Throughout this document, we'll talk about ASP.NET's "code-first" integration with OpenAPI. Code-first is one of the two main models of interacting with APIs and their accompanying descriptions.
 
-In the **code-first** model, we start with APIs that are implemented in the our programming langauge/stack of choice and generate OpenAPI descriptions that can interop with other ecosystem tools.
+In the **code-first** model, we start with APIs that are implemented in our programming language/stack of choice and generate OpenAPI descriptions that can interop with other ecosystem tools.
 
-In the **spec-first** model, we start by describing our APIs using the language provided by the OpenAPI specification and then feeding that describing into server/client generators, testing tools, etc.
+In the **spec-first** model, we start by describing our APIs using the language provided by the OpenAPI specification and then feeding that description into server/client generators, testing tools, etc.
 
 As you dive deeper into the world of OpenAPI, you'll hear lots of perspectives about whether **code-first** or **spec-first** is the right way to build APIs. Like any decision, it requires a fair bit of nuance and there's no one right approach to use in either case.
 
-Now that we've covered the fundamentals of what OpenAPI and ASP.NET Core are, we'll move to the next session of documentation which talks about the way ASP.NET Core APIs are mapped to OpenAPI document implementations using the code-first approach.
+Now that we've covered the fundamentals of what OpenAPI and ASP.NET Core are, we'll move to the next section of documentation which talks about the way ASP.NET Core APIs are mapped to OpenAPI document implementations using the code-first approach.
 
 So, let's take a deeper look at our code-first document generation flow. Let's assume that we have the following minimal API implemented in ASP.NET Core.
 
@@ -295,7 +299,18 @@ The information captured by the `IApiDescriptionProvider` implementations can be
 
 ## Into OpenAPI
 
-If you squint, the information in the `ApiDescription`s provided by `IApiDescriptionProvider` fulfill a lot of the requirements of the OpenAPI specification, but doesn't exactly match the shape of the spec. Enter the first responsibility of the `OpenApiDocumentService`, mapping `ApiDescription` instances to `OpenApiOperation` instances that are eventually aggregated into a top-level document.
+This class allows `IApiDescriptionProvider` interface to describe the fundamental components of an HTTP request/response handler:
+
+- The HTTP method that it supports for taking requests
+- The HTTP request path that it supports
+- The types of inputs that it takes, both in the request body and via parameters in the route/query arguments/header
+- The types of responses that it produces
+
+The information captured by the `IApiDescriptionProvider` implementations can be consumed by anyone, including OpenAPI generators.
+
+## Into OpenAPI
+
+If you squint, the information in the `ApiDescription`s provided by `IApiDescriptionProvider` fulfill a lot of the requirements of the OpenAPI specification, but don't exactly match the shape of the spec. Enter the first responsibility of the `OpenApiDocumentService`: mapping `ApiDescription` instances to `OpenApiOperation` instances that are eventually aggregated into a top-level document.
 
 > Note: The `OpenApiOperation` types are provided by the [Microsoft.OpenApi](https://github.com/microsoft/OpenAPI.NET) which provides a .NET-based object model for representing the OpenAPI document and serializers/deserializers for it.
 
@@ -306,7 +321,7 @@ In addition to mapping the information provided directly in the `ApiDescription`
 - `IEndpointSummaryMetadata` maps to the operation's summary.
 - `IEndpointDescriptionMetadata` maps to the operation's description.
 
-And so on. The `OpenApiDocumentService` also massages some of the incompatibilities between the metadata that's exposed in the `ApiDescription` and the expectations of the OpenAPI specification. Some of these quirks include:
+And so on. The `OpenApiDocumentService` also addresses some of the incompatibilities between the metadata that's exposed in the `ApiDescription` and the expectations of the OpenAPI specification. Some of these quirks include:
 
 - The `IApiDescriptionProvider` implementations for minimal APIs and MVC reflect the quirks of the model-binding behavior of those systems. For example, MVC represents binding arguments from a form differently from minimal APIs but both must map to the same functional representation in OpenAPI.
 - OpenAPI expects certain defaults to be set for responses and request bodies that `IApiDescriptionProvider` implementations don't set.
@@ -315,13 +330,13 @@ Outside of those quirks and metadata mappings, the implementation of the `OpenAp
 
 ## With JSON Schemas
 
-[JSON Schema](https://json-schema.org/) is a draft specification that allows developers to document and validation JSON data. OpenAPI schema is a superset of the JSON schema format. In the context of OpenAPI, OpenAPI schemas are used to describe the types of inputs and outputs a given HTTP handler processes.
+[JSON Schema](https://json-schema.org/) is a draft specification that allows developers to document and validate JSON data. The OpenAPI schema is a superset of the JSON schema format. In the context of OpenAPI, OpenAPI schemas are used to describe the types of inputs and outputs a given HTTP handler processes.
 
-> Note: The relationship between JSON Schema and OpenAPI Schema varies depending on the version of the OpenAPI specification that you are targeting. OpenAPI v3.1 supports JSON Schema exactly without any modifications. Versions of the specification outside of this one expose a superset of the features that are specified in JSON schema via OpenAPI schema.
+> Note: The relationship between JSON Schema and OpenAPI Schema varies depending on the version of the OpenAPI specification that you are targeting. OpenAPI v3.1 supports JSON Schema without any modifications. Versions of the specification outside of this one expose a superset of the features that are specified in JSON schema via OpenAPI schema.
 
-The main responsibilities of ASP.NET Core's built-in OpenAPI support is the generation of JSON schemas from .NET types used in an API. The bulk of JSON schema generation support in ASP.NET Core's implementation is provided by the underlying JSON schema generation in System.Text.Json.
+The main responsibilities of ASP.NET Core's built-in OpenAPI support are the generation of JSON schemas from .NET types used in an API. The bulk of JSON schema generation support in ASP.NET Core's implementation is provided by the underlying JSON schema generation by System.Text.Json.
 
-> Note: As of .NET 9 Preview 5, the implementation is consumed via the `JsonSchemaMapper` prototype.
+> Note: As of .NET 9 Preview 5, the implementation can be consumed via the `JsonSchemaMapper` prototype.
 
 The OpenAPI generator implementation is responsible for:
 
