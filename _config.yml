@@ -32,3 +32,10 @@ mermaid:
 urls:
   github:         https://github.com/captainsafia
   twitter:        https://twitter.com/captainsafia
+
+defaults:
+  - scope:
+      path: ""        # site-wide
+      type: posts     # NOT "post" or "pages"
+    values:
+      layout: post
