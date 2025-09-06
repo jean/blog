@@ -1,0 +1,185 @@
+---
+layout: default
+---
+
+<div class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  
+  {% if content and content != "" %}
+    <div class="page-content">
+      {{ content }}
+    </div>
+  {% endif %}
+  
+  <div class="archive-content">
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    
+    {% for year in posts_by_year %}
+      <div class="archive-year">
+        <h2 class="archive-year-title">{{ year.name }}</h2>
+        
+        {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
+        
+        {% for month in posts_by_month %}
+          <div class="archive-month">
+            <h3 class="archive-month-title">{{ month.name }}</h3>
+            
+            <ul class="archive-post-list">
+              {% for post in month.items %}
+                <li class="archive-post-item">
+                  <div class="archive-post-meta">
+                    <span class="archive-post-date">{{ post.date | date: "%d" }}</span>
+                  </div>
+                  <div class="archive-post-content">
+                    <a href="{{ post.url }}" class="archive-post-link">{{ post.title }}</a>
+                    {% if page.show_excerpt and post.excerpt %}
+                      <p class="archive-post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                    {% endif %}
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+    
+    {% if site.posts.size == 0 %}
+      <p class="archive-empty">No posts found.</p>
+    {% endif %}
+    
+    <div class="archive-summary">
+      <p class="archive-count">Total: {{ site.posts.size }} post{% if site.posts.size != 1 %}s{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.archive-content {
+  margin-top: 2rem;
+}
+
+.archive-year {
+  margin-bottom: 3rem;
+}
+
+.archive-year-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #303030;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.archive-month {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.archive-month-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #515151;
+  margin-bottom: 1rem;
+}
+
+.archive-post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.archive-post-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.archive-post-meta {
+  flex-shrink: 0;
+  width: 3rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+.archive-post-date {
+  font-size: 0.9rem;
+  color: #999;
+  font-weight: 500;
+}
+
+.archive-post-content {
+  flex-grow: 1;
+}
+
+.archive-post-link {
+  color: #268bd2;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.archive-post-link:hover {
+  text-decoration: underline;
+  color: #1e6fa8;
+}
+
+.archive-post-excerpt {
+  margin: 0.5rem 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.archive-empty {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.archive-summary {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.archive-count {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .archive-year-title {
+    font-size: 1.75rem;
+  }
+  
+  .archive-month-title {
+    font-size: 1.25rem;
+  }
+  
+  .archive-month {
+    margin-left: 0.5rem;
+  }
+  
+  .archive-post-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .archive-post-meta {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+  }
+}
+</style>
