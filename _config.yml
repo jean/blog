@@ -33,6 +33,7 @@ mermaid:
 urls:
   github:         https://github.com/captainsafia
   bluesky:        https://bsky.app/profile/captainsafia.com
+  about:          https://safia.rocks
 
 defaults:
   - scope:
