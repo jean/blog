@@ -21,6 +21,7 @@ plugins:
   - jekyll-paginate
   - jekyll-mermaid
   - jekyll-target-blank
+  - jekyll-seo-tag
 
 paginate:            1
 paginate_path:       "page:num"
@@ -31,7 +32,7 @@ mermaid:
 # Custom vars
 urls:
   github:         https://github.com/captainsafia
-  twitter:        https://twitter.com/captainsafia
+  bluesky:        https://bsky.app/profile/captainsafia.com
 
 defaults:
   - scope:

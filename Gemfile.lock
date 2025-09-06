@@ -148,9 +148,10 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-mermaid
   jekyll-paginate (~> 1.1)
+  jekyll-seo-tag
   jekyll-target-blank
   jemoji
-  minima (~> 2.5.1)
+  minima (~> 2.5.2)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
