@@ -2,6 +2,9 @@
 markdown:         kramdown
 highlighter:      rogue
 
+kramdown:
+  syntax_highlighter: rouge
+
 # Permalinks
 permalink:        pretty
 
