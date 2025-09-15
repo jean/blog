@@ -25,6 +25,7 @@ plugins:
   - jekyll-mermaid
   - jekyll-target-blank
   - jekyll-seo-tag
+  - jemoji
 
 paginate:            1
 paginate_path:       "page:num"

@@ -33,13 +33,13 @@ GEM
     ffi (1.17.2-x86_64-darwin)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
-    google-protobuf (4.32.0)
+    google-protobuf (4.32.1)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.32.0-arm64-darwin)
+    google-protobuf (4.32.1-arm64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.32.0-x86_64-darwin)
+    google-protobuf (4.32.1-x86_64-darwin)
       bigdecimal
       rake (>= 13)
     html-pipeline (2.14.3)
@@ -116,15 +116,15 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rexml (3.4.2)
+    rexml (3.4.4)
     rouge (4.6.0)
     safe_yaml (1.0.5)
-    sass-embedded (1.92.0)
+    sass-embedded (1.92.1)
       google-protobuf (~> 4.31)
       rake (>= 13)
-    sass-embedded (1.92.0-arm64-darwin)
+    sass-embedded (1.92.1-arm64-darwin)
       google-protobuf (~> 4.31)
-    sass-embedded (1.92.0-x86_64-darwin)
+    sass-embedded (1.92.1-x86_64-darwin)
       google-protobuf (~> 4.31)
     securerandom (0.4.1)
     terminal-table (3.0.2)
@@ -158,4 +158,4 @@ DEPENDENCIES
   webrick (~> 1.8)
 
 BUNDLED WITH
-   2.5.10
+   2.7.2
