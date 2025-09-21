@@ -45,3 +45,7 @@ defaults:
       type: posts     # NOT "post" or "pages"
     values:
       layout: post
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
