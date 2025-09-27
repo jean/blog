@@ -25,6 +25,7 @@ plugins:
   - jekyll-mermaid
   - jekyll-target-blank
   - jekyll-seo-tag
+  - jekyll-og-image
   - jemoji
 
 paginate:            1
@@ -49,3 +50,12 @@ defaults:
       path: "assets/images"
     values:
       image: true
+
+og_image:
+  collections: ["posts", "pages"]
+  output_dir: "assets/images/og"
+  domain: "blog.safia.rocks"
+  border_bottom:
+    width: 20
+    fill:
+      - "#90a959"

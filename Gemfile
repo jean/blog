@@ -41,3 +41,5 @@ gem "bigdecimal", "~> 3.2"
 gem "jekyll-paginate", "~> 1.1"
 
 gem 'jekyll-seo-tag'
+
+gem 'jekyll-og-image'
