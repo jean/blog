@@ -30,6 +30,7 @@ GEM
     eventmachine (1.2.7)
     ffi (1.17.2)
     ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-darwin)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
     google-protobuf (4.32.1)
