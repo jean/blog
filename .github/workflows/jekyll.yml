@@ -36,13 +36,22 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4.5' # Not needed with a .ruby-version file
+          ruby-version: "3.4.5" # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
-      - name: Install libvips
+      - name: Install libvips (with retries)
+        shell: bash
         env:
           DEBIAN_FRONTEND: noninteractive
-        run: sudo apt-get install --fix-missing libvips
+        run: |
+          set -euo pipefail
+          # Clean up any half-finished dpkg state from previous attempts
+          sudo dpkg --configure -a || true
+          # Update indices (mirrors sometimes lag behind security pocket)
+          sudo apt-get -o Acquire::Retries=3 update
+          # Install vips + the poppler glib dependency Jekyll’s ruby-vips needs
+          sudo apt-get -o Acquire::Retries=3 install -y --no-install-recommends \
+            libvips libpoppler-glib8t64
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
