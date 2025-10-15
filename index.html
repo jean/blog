@@ -3,31 +3,35 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
+<section class="posts" aria-label="Blog posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }} | {% include read-time.html content = post.content %}</span>
+  <article class="post">
+    <header>
+      <h1 class="post-title">
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h1>
+      <div class="post-date">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> | 
+        {% include read-time.html content = post.content %}
+      </div>
+    </header>
 
     {{ post.content }}
-  </div>
+  </article>
   {% endfor %}
-</div>
+</section>
 
-<div class="pagination">
+<nav class="pagination" aria-label="Pagination navigation">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}" aria-label="Go to older posts">Older</a>
   {% else %}
-    <span class="pagination-item older">Older</span>
+    <span class="pagination-item older" aria-label="No older posts available">Older</span>
   {% endif %}
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | relative_url }}">Newer</a>
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Go to newer posts">Newer</a>
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <span class="pagination-item newer" aria-label="No newer posts available">Newer</span>
   {% endif %}
-</div>
+</nav>

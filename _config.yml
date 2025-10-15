@@ -11,7 +11,6 @@ permalink:        pretty
 # Setup
 title:            Bug Repellent
 tagline:          The blog of @captainsafia
-description:      The blog of Safia Abdalla, a software engineer and writer.
 url:              https://blog.safia.rocks
 baseurl:          /
 
@@ -36,8 +35,6 @@ mermaid:
 
 # Custom vars
 urls:
-  github:         https://github.com/captainsafia
-  bluesky:        https://bsky.app/profile/captainsafia.com
   about:          https://safia.rocks
 
 defaults:
