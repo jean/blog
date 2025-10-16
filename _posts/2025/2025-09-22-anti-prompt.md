@@ -1,6 +1,7 @@
 ---
 title: The anti-prompt shell prompt
 description: Embrace tradition, reject modernity, let go of that noisy crap in your shell.
+tags: [shell, workflow, minimalism, fish]
 ---
 
 I've been embracing minimalism more and more in my workflow lately. As time has gone on, I've tweaked my VS Code config to remove more and more UI elements. It started with removing the status bar, then the gutter, then the activity bar, and so on. This inclination to strip down the user interfaces that I interact with most frequently to their barest parts comes out of a complete dissatisfaction with just how _noisy_ so many apps are these days. Even your favorite editor will insist on overwhelming your periphery with a lot of noise but not enough signal. So I throw all of it out.

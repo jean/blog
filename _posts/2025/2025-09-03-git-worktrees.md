@@ -1,5 +1,6 @@
 ---
 title: Git worktrees for fun and profit
+tags: [git, development-workflow, version-control]
 ---
 
 I've always been a mental multi-tasker when it comes to juggling the things I'm working on. I like having multiple bugs and features in flight at the same time and bouncing between different ideas. Prior to learning about git worktrees, maintaining multiple clones of a repo was my way of managing my multi-tasker workflow. This got really hard to do as my career progressed and I started juggling not just multiple features and bugs — but multiple prototypes and code reviews. About a year ago, I finally decided enough was enough and I needed to invest some energy into my source control workflow so that managing all these different workstreams was somewhat sane. Enter: git worktrees.

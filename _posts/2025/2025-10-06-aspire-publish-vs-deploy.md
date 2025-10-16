@@ -1,6 +1,7 @@
 ---
 title: "Design flashpoint: `aspire publish` vs `aspire deploy`"
 description: "Exploring the design decisions behind aspire publish and aspire deploy commands, and how they balance between ejecting from the Aspire ecosystem versus providing fine-grained deployment control."
+tags: [aspire, deployment, .net, api-design]
 ---
 
 From my blog posts and pull requests, you might've gleaned that I've been doing a ton of work building out the experience for deploying Aspire applications to various targets. Today's blog post is a rehash of some discussions the team has been having about the behavior of the `aspire publish` and `aspire deploy` commands.

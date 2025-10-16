@@ -1,6 +1,7 @@
 ---
 title: Verifying the source of (generator) truth
 description: A deep dive into testing infrastructure I built for incremental .NET source generators, covering compile-time validation, runtime behavior verification, and incremental compilation testing.
+tags: [source-generators, .net, testing, aot, csharp]
 ---
 
 Over the past few years, I've had the chance to work on a number of features in .NET that take a dependency on source generators. In that time, I've had the chance to refine the strategy that I use to verify the validity of those source generators at both compile-time and run-time. In this blog post, I'll walk through the gist of the test setup that I use and how it has evolved over time.

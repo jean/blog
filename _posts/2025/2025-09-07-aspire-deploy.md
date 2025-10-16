@@ -1,6 +1,7 @@
 ---
 title: Building custom deployment pipelines with Aspire
 description: A blog post about how to use Aspire to deploy a static site to Azure Storage with Azure Front Door as a CDN and some exploration of Aspire's evolving deployment abstractions.
+tags: [aspire, deployment, azure]
 ---
 
 I've been spending a lot of time lately working on the deployment story for Aspire. As a part of this, I had to go on a side-quest to figure out if our deployment abstractions in Aspire could be used to deploy to a non-standard environment: a static website generated from a Vite app deployed to an Azure Storage blob and placed behind an Azure Front Door.

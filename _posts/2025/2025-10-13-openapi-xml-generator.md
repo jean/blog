@@ -1,6 +1,7 @@
 ---
 title: "The docs write themselves: from XML doc comments to OpenAPI specs"
 description: "A deep dive into implementing XML documentation comment integration for ASP.NET Core's OpenAPI generator, exploring the technical challenges of bridging compile-time XML docs with runtime OpenAPI generation using source generators for AoT-friendly API documentation."
+tags: [openapi, aspnetcore, source-generators, documentation, .net]
 ---
 
 November is right around the corner, which means it's time for another release of .NET. I figured the next couple of weeks are a good time to reminisce on some of the features I built for this release. We'll talk about the features in chronological order. Active development on a .NET release usually starts in January of the release year, so January 2025, and one of the first things I took a look at was adding support for integrating XML comments into OpenAPI documents.

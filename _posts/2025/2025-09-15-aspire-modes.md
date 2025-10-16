@@ -1,6 +1,7 @@
 ---
 title: "Design flashpoint: Execution modes in Aspire apps"
 description: "Why Aspire has run-mode and publish-mode but no deploy-mode, and what this reveals about API design trade-offs in distributed applications."
+tags: [aspire, api-design, distributed-systems]
 ---
 
 In my previous blog post, I touched on the tension between Aspire's run-mode and publish-mode concepts and the notable absence of a deploy-mode. This post dives deeper into that design challenge with some background context and a healthy dose of API naming bikeshed to balance our diet.
