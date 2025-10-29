@@ -1,8 +1,8 @@
 {% capture output %}
-{% assign words_total = include.content | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
-    {% assign words_without_code = include.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
-    {% assign words_without_math = include.content | strip_html | number_of_words %}
-    {% assign words_without_either = include.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | strip_html | number_of_words %}
+{% assign words_total = include.content | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | replace: '<div class="mermaid">', '<!--' | replace: '</div>', '-->' | strip_html | number_of_words %}
+    {% assign words_without_code = include.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | replace: '<div class="mermaid">', '<!--' | replace: '</div>', '-->' | strip_html | number_of_words %}
+    {% assign words_without_math = include.content | replace: '<div class="mermaid">', '<!--' | replace: '</div>', '-->' | strip_html | number_of_words %}
+    {% assign words_without_either = include.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<div class="mermaid">', '<!--' | replace: '</div>', '-->' | strip_html | number_of_words %}
 
     {% assign words_code = words_total | minus: words_without_code | divided_by: 2.0 %}
     {% assign words_math = words_total | minus: words_without_math | times: 2.0 %}
