@@ -7,7 +7,8 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-date">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time> | 
-      {% include read-time.html content = page.content %}
+      {% include read-time.html content = page.content %} |
+      by <a href="https://captainsafia.com" target="_blank" rel="noopener noreferrer">Safia Abdalla</a>
     </div>
   </header>
   {{ content }}
